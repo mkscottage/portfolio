@@ -8,9 +8,9 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename={'/portfolio'}>
         <Switch>
-          <Route exact path="/" component={Homepage} />
+          <Route exact path={`${process.env.PUBLIC_URL}/`} component={Homepage} />
         </Switch>
       </Router>
     </div>
