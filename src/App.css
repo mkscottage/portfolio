@@ -1,9 +1,28 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .text-shadow {
   text-shadow: 1px 1px 25px #000000cc;
 }
 
 p {
   margin-bottom: 0!important;
+}
+
+.list-group-item {
+  background-color: rgba(255, 255, 255, 0.9);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255) 70%, rgba(255, 255, 255, 0.9) 90%);
+}
+
+#down-arrow {
+  color: rgba(255, 255, 255, 0.5);
+  transition: 0.5s;
+}
+
+#down-arrow:hover {
+  color: white;
+  transition: 0.5s;
 }
 
 /* width */
