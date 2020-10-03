@@ -1,59 +1,42 @@
 import React from "react";
 import * as MyPic from "../../assets/my_pic.jpg";
+import BootstrapIcons from "../../../node_modules/bootstrap-icons/bootstrap-icons.svg";
 
 const Homepage = () => {
+  const skills = [
+    {
+      id: 1,
+      name: "Languages",
+      items: [
+        ["Java", 75],
+        ["Python", 80],
+        ["JavaScript", 70],
+        ["HTML", 80],
+        ["CSS", 65],
+      ],
+    },
+    {
+      id: 2,
+      name: "Frameworks",
+      items: [
+        ["Django", 75],
+        ["Flask", 65],
+        ["Hibernate", 70],
+        ["React", 80],
+      ],
+    },
+  ];
   return (
     <div className="container-fluid p-0">
-      <div
-        className="text-center px-0 py-4"
-        style={{
-          position: "relative",
-          minHeight: "100vh",
-          background:
-            "linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 51%, rgba(0, 0, 0, 0.93) 85%)",
-        }}
-      >
+      <div className="text-center px-0 py-4" id="homepage-about-me">
         <div className="container">
-          <div
-            style={{
-              width: "100%",
-              height: "2px",
-              position: "relative",
-              top: "100px",
-              left: "50%",
-              transform: "translateX(-50%)",
-            }}
-            className="rounded m-0 p-0 d-flex"
-          >
+          <div id="image-cross-line" className="rounded m-0 p-0 d-flex">
             <p className="flex-fill h-100 bg-white" />
             <p className="h-100" style={{ width: "230px" }} />
             <p className="flex-fill h-100 bg-white" />
           </div>
-          <div
-            style={{
-              width: "210px",
-              height: "210px",
-              borderRadius: "50%",
-              backgroundColor: "white",
-              position: "relative",
-              left: "50%",
-              transform: "translateX(-50%)",
-            }}
-            className="text-center shadow"
-          >
-            <img
-              className=""
-              style={{
-                height: "200px",
-                width: "200px",
-                position: "relative",
-                top: "50%",
-                transform: "translateY(-50%)",
-                borderRadius: "50%",
-              }}
-              src={MyPic}
-              alt="Mukesh Sharma"
-            />
+          <div id="my-pic-circle" className="text-center">
+            <img src={MyPic} alt="Mukesh Sharma" />
           </div>
 
           <hr className="bg-white" />
@@ -70,330 +53,63 @@ const Homepage = () => {
             (Python - backend), Hibernate (Java - Backend) and React (JavaScript
             - Frontend).
           </p>
-          <a href="#my-skills">
-            <svg
-              width="4em"
-              height="4em"
-              viewBox="0 0 16 16"
-              className="bi bi-arrow-down-circle mt-5"
-              fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
-              id="down-arrow"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-              />
-              <path
-                fill-rule="evenodd"
-                d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"
-              />
+          <a href="#homepage-my-skills">
+            <svg class="bi mt-5" id="down-arrow">
+              <use xlinkHref={`${BootstrapIcons}#arrow-down-circle`} />
             </svg>
           </a>
         </div>
       </div>
-      <div
-        className="text-left p-4"
-        id="my-skills"
-        style={{
-          minHeight: "100vh",
-          background:
-            "linear-gradient(50deg, rgb(0, 88, 115, 0.90) 0%, rgb(11, 152, 175, 0.97) 30%, rgb(11, 152, 175, 0.94) 50%, rgb(0, 88, 115, 0.90) 100%",
-          // "linear-gradient(50deg, rgb(32, 210, 239, 0.8) 0%, rgb(11, 152, 175, 0.94) 51%, rgb(0, 88, 115, 0.90) 85%",
-        }}
-      >
+      <div className="text-left p-4" id="homepage-my-skills">
         <div className="container">
           <h2 className="display-4 text-white text-shadow">My Skills -</h2>
           <hr className="text-light" />
-          {/* <ul className="list-group shadow">
-            <li className="list-group-item">
-              <div className="row">
-                <div className="col-sm-4 col-6">Java</div>
-                <div className="col">
-                  <div className="progress">
-                    <div
-                      className="progress-bar bg-warning"
-                      role="progressbar"
-                      style={{ width: "75%" }}
-                      aria-valuenow="75"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
+          <div className="accordion" id="skills-accordion">
+            {skills.map((skill) => (
+              <div className="card" style={{ background: "rgba(0,0,0,0.1)" }}>
+                <div className="card-header p-0" id={`heading-${skill.id}`}>
+                  <h2 className="mb-0">
+                    <button
+                      className="btn btn-block text-left text-light p-3 rounded-0"
+                      data-toggle="collapse"
+                      data-target={`#collapse-${skill.id}`}
+                      style={{ background: "rgba(0,0,0,0.3)" }}
                     >
-                      75%
-                    </div>
+                      {skill.name}
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id={`collapse-${skill.id}`}
+                  className={`collapse${skill.id === 1 ? " show" : ""}`}
+                  aria-labelledby={`heading-${skill.id}`}
+                  data-parent="#skills-accordion"
+                >
+                  <div className="card-body">
+                    <ul className="list-group shadow">
+                      {skill.items.map((item) => (
+                        <li className="list-group-item">
+                          <div className="row">
+                            <div className="col-sm-4 col-6">{item[0]}</div>
+                            <div className="col">
+                              <div className="progress shadow shadow-sm bg-warning">
+                                <div className="progress-bar bg-primary" style={{ width: `${item[1]}%` }}>{item[1]}%</div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>
-            </li>
-            <li className="list-group-item">
-              <div className="row">
-                <div className="col-sm-4 col-6">Python</div>
-                <div className="col">
-                  <div className="progress">
-                    <div
-                      className="progress-bar bg-secondary"
-                      role="progressbar"
-                      style={{ width: "80%" }}
-                      aria-valuenow="80"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      80%
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li className="list-group-item">
-              <div className="row">
-                <div className="col-sm-4 col-6">JavaScript</div>
-                <div className="col">
-                  <div className="progress">
-                    <div
-                      className="progress-bar bg-info"
-                      role="progressbar"
-                      style={{ width: "60%" }}
-                      aria-valuenow="60"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      60%
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li className="list-group-item">
-              <div className="row">
-                <div className="col-sm-4 col-6">HTML</div>
-                <div className="col">
-                  <div className="progress">
-                    <div
-                      className="progress-bar bg-success"
-                      role="progressbar"
-                      style={{ width: "70%" }}
-                      aria-valuenow="70"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      70%
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul> */}
-
-          <div className="accordion" id="accordionExample">
-            <div className="card" style={{ background: "rgba(0,0,0,0.1)" }}>
-              <div className="card-header p-0" id="headingOne">
-                <h2 className="mb-0">
-                  <button
-                    className="btn btn-block text-left text-light p-3 rounded-0"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#collapseOne"
-                    aria-expanded="true"
-                    aria-controls="collapseOne"
-                    style={{ background: "rgba(0,0,0,0.3)" }}
-                  >
-                    Languages
-                  </button>
-                </h2>
-              </div>
-
-              <div
-                id="collapseOne"
-                className="collapse show"
-                aria-labelledby="headingOne"
-                data-parent="#accordionExample"
-              >
-                <div className="card-body">
-                  <ul className="list-group shadow">
-                    <li className="list-group-item">
-                      <div className="row">
-                        <div className="col-sm-4 col-6">Java</div>
-                        <div className="col">
-                          <div className="progress shadow shadow-sm bg-primary">
-                            <div
-                              className="progress-bar bg-warning"
-                              role="progressbar"
-                              style={{ width: "75%" }}
-                              aria-valuenow="75"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            >
-                              75%
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="list-group-item">
-                      <div className="row">
-                        <div className="col-sm-4 col-6">Python</div>
-                        <div className="col">
-                          <div className="progress shadow shadow-sm bg-danger">
-                            <div
-                              className="progress-bar bg-secondary"
-                              role="progressbar"
-                              style={{ width: "80%" }}
-                              aria-valuenow="80"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            >
-                              80%
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="list-group-item">
-                      <div className="row">
-                        <div className="col-sm-4 col-6">JavaScript</div>
-                        <div className="col">
-                          <div className="progress shadow shadow-sm bg-warning">
-                            <div
-                              className="progress-bar bg-info"
-                              role="progressbar"
-                              style={{ width: "60%" }}
-                              aria-valuenow="60"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            >
-                              60%
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="list-group-item">
-                      <div className="row">
-                        <div className="col-sm-4 col-6">HTML</div>
-                        <div className="col">
-                          <div className="progress shadow shadow-sm bg-dark">
-                            <div
-                              className="progress-bar bg-success"
-                              role="progressbar"
-                              style={{ width: "70%" }}
-                              aria-valuenow="70"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            >
-                              70%
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="card">
-              <div className="card-header p-0" id="headingTwo">
-                <h2 className="mb-0">
-                  <button
-                    className="btn btn-light btn-block text-left collapsed p-3 rounded-0"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#collapseTwo"
-                    aria-expanded="false"
-                    aria-controls="collapseTwo"
-                  >
-                    Frameworks
-                  </button>
-                </h2>
-              </div>
-              <div
-                id="collapseTwo"
-                className="collapse"
-                aria-labelledby="headingTwo"
-                data-parent="#accordionExample"
-              >
-                <div className="card-body">
-                <ul className="list-group shadow">
-                    <li className="list-group-item">
-                      <div className="row">
-                        <div className="col-sm-4 col-6">Django</div>
-                        <div className="col">
-                          <div className="progress shadow shadow-sm bg-primary">
-                            <div
-                              className="progress-bar bg-warning"
-                              role="progressbar"
-                              style={{ width: "75%" }}
-                              aria-valuenow="75"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            >
-                              75%
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="list-group-item">
-                      <div className="row">
-                        <div className="col-sm-4 col-6">Flask</div>
-                        <div className="col">
-                          <div className="progress shadow shadow-sm bg-danger">
-                            <div
-                              className="progress-bar bg-secondary"
-                              role="progressbar"
-                              style={{ width: "80%" }}
-                              aria-valuenow="80"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            >
-                              80%
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="list-group-item">
-                      <div className="row">
-                        <div className="col-sm-4 col-6">Hibernate</div>
-                        <div className="col">
-                          <div className="progress shadow shadow-sm bg-warning">
-                            <div
-                              className="progress-bar bg-info"
-                              role="progressbar"
-                              style={{ width: "60%" }}
-                              aria-valuenow="60"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            >
-                              60%
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="list-group-item">
-                      <div className="row">
-                        <div className="col-sm-4 col-6">React</div>
-                        <div className="col">
-                          <div className="progress shadow shadow-sm bg-dark">
-                            <div
-                              className="progress-bar bg-success"
-                              role="progressbar"
-                              style={{ width: "70%" }}
-                              aria-valuenow="70"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            >
-                              70%
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
+        </div>
+      </div>
+      <div id="homepage-my-works">
+        <div className="container">
+            
         </div>
       </div>
     </div>
