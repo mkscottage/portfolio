@@ -74,7 +74,7 @@ const Homepage = () => {
             <li className="row">
               <div className="col-4">Java</div>
               <div className="col">
-                <div class="progress">
+                <div className="progress">
                   <div
                     className="progress-bar bg-warning"
                     role="progressbar"
@@ -91,7 +91,7 @@ const Homepage = () => {
             <li className="row">
               <div className="col-4">Python</div>
               <div className="col">
-                <div class="progress">
+                <div className="progress">
                   <div
                     className="progress-bar bg-secondary"
                     role="progressbar"
@@ -108,7 +108,7 @@ const Homepage = () => {
             <li className="row">
               <div className="col-4">JavaScript</div>
               <div className="col">
-                <div class="progress">
+                <div className="progress">
                   <div
                     className="progress-bar bg-info"
                     role="progressbar"
@@ -125,7 +125,7 @@ const Homepage = () => {
             <li className="row">
               <div className="col-4">HTML</div>
               <div className="col">
-                <div class="progress">
+                <div className="progress">
                   <div
                     className="progress-bar bg-success"
                     role="progressbar"
