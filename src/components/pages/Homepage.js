@@ -108,7 +108,7 @@ const Homepage = () => {
           {/* <ul className="list-group shadow">
             <li className="list-group-item">
               <div className="row">
-                <div className="col-4">Java</div>
+                <div className="col-sm-4 col-6">Java</div>
                 <div className="col">
                   <div className="progress">
                     <div
@@ -127,7 +127,7 @@ const Homepage = () => {
             </li>
             <li className="list-group-item">
               <div className="row">
-                <div className="col-4">Python</div>
+                <div className="col-sm-4 col-6">Python</div>
                 <div className="col">
                   <div className="progress">
                     <div
@@ -146,7 +146,7 @@ const Homepage = () => {
             </li>
             <li className="list-group-item">
               <div className="row">
-                <div className="col-4">JavaScript</div>
+                <div className="col-sm-4 col-6">JavaScript</div>
                 <div className="col">
                   <div className="progress">
                     <div
@@ -165,7 +165,7 @@ const Homepage = () => {
             </li>
             <li className="list-group-item">
               <div className="row">
-                <div className="col-4">HTML</div>
+                <div className="col-sm-4 col-6">HTML</div>
                 <div className="col">
                   <div className="progress">
                     <div
@@ -208,11 +208,11 @@ const Homepage = () => {
                 aria-labelledby="headingOne"
                 data-parent="#accordionExample"
               >
-                <div className="card-body px-5">
+                <div className="card-body">
                   <ul className="list-group shadow">
                     <li className="list-group-item">
                       <div className="row">
-                        <div className="col-4">Java</div>
+                        <div className="col-sm-4 col-6">Java</div>
                         <div className="col">
                           <div className="progress shadow shadow-sm bg-primary">
                             <div
@@ -231,7 +231,7 @@ const Homepage = () => {
                     </li>
                     <li className="list-group-item">
                       <div className="row">
-                        <div className="col-4">Python</div>
+                        <div className="col-sm-4 col-6">Python</div>
                         <div className="col">
                           <div className="progress shadow shadow-sm bg-danger">
                             <div
@@ -250,7 +250,7 @@ const Homepage = () => {
                     </li>
                     <li className="list-group-item">
                       <div className="row">
-                        <div className="col-4">JavaScript</div>
+                        <div className="col-sm-4 col-6">JavaScript</div>
                         <div className="col">
                           <div className="progress shadow shadow-sm bg-warning">
                             <div
@@ -269,7 +269,7 @@ const Homepage = () => {
                     </li>
                     <li className="list-group-item">
                       <div className="row">
-                        <div className="col-4">HTML</div>
+                        <div className="col-sm-4 col-6">HTML</div>
                         <div className="col">
                           <div className="progress shadow shadow-sm bg-dark">
                             <div
@@ -311,11 +311,11 @@ const Homepage = () => {
                 aria-labelledby="headingTwo"
                 data-parent="#accordionExample"
               >
-                <div className="card-body px-5">
+                <div className="card-body">
                 <ul className="list-group shadow">
                     <li className="list-group-item">
                       <div className="row">
-                        <div className="col-4">Django</div>
+                        <div className="col-sm-4 col-6">Django</div>
                         <div className="col">
                           <div className="progress shadow shadow-sm bg-primary">
                             <div
@@ -334,7 +334,7 @@ const Homepage = () => {
                     </li>
                     <li className="list-group-item">
                       <div className="row">
-                        <div className="col-4">Flask</div>
+                        <div className="col-sm-4 col-6">Flask</div>
                         <div className="col">
                           <div className="progress shadow shadow-sm bg-danger">
                             <div
@@ -353,7 +353,7 @@ const Homepage = () => {
                     </li>
                     <li className="list-group-item">
                       <div className="row">
-                        <div className="col-4">Hibernate</div>
+                        <div className="col-sm-4 col-6">Hibernate</div>
                         <div className="col">
                           <div className="progress shadow shadow-sm bg-warning">
                             <div
@@ -372,7 +372,7 @@ const Homepage = () => {
                     </li>
                     <li className="list-group-item">
                       <div className="row">
-                        <div className="col-4">React</div>
+                        <div className="col-sm-4 col-6">React</div>
                         <div className="col">
                           <div className="progress shadow shadow-sm bg-dark">
                             <div
