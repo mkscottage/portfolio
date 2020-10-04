@@ -2,15 +2,19 @@ html {
   scroll-behavior: smooth;
 }
 
+#homepage {
+  background: linear-gradient(45deg, #00c9ff, #92fe9d, #00c9ff, #92fe9d);
+}
+
 #homepage-about-me {
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.9) 0%,
     rgba(0, 0, 0, 0.8) 51%,
     rgba(0, 0, 0, 0.93) 85%
-  );
+  ); */
 }
 
 #image-cross-line {
@@ -30,7 +34,13 @@ html {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  box-shadow: 0 0 25px black;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.425);
+
+  transition: 0.2s;
+}
+#my-pic-circle:hover {
+  transform: translateX(-50%) scale(1.05);
+  transition: 0.5s;
 }
 
 #my-pic-circle img {
@@ -44,7 +54,7 @@ html {
 
 #homepage-my-skills {
   min-height: 100vh;
-  background: linear-gradient(to bottom, #00c9ff, #92fe9d);
+  /* background: linear-gradient(to bottom, #00c9ff, #92fe9d); */
   /* background: linear-gradient(
     50deg,
     rgb(0, 88, 115, 0.9) 0%,
@@ -56,11 +66,15 @@ html {
 
 #homepage-my-works {
   min-height: 100vh;
-  background: linear-gradient(to bottom, #005c97, #363795);
+  /* background: linear-gradient(to bottom, #005c97, #363795); */
 }
 
 .text-shadow {
   text-shadow: 1px 1px 25px #000000cc;
+}
+
+.text-shadow-1 {
+  text-shadow: 1px 1px 5px rgb(0, 0, 0);
 }
 
 p {
@@ -78,7 +92,7 @@ p {
 }
 
 #down-arrow {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.658);
   transition: 0.5s;
   height: 4em;
   width: 4em;
@@ -87,6 +101,23 @@ p {
 #down-arrow:hover {
   color: white;
   transition: 0.5s;
+}
+
+.my-works-card {
+  transition: 0.2s;
+}
+.my-works-card:hover {
+  transform: scale(1.01);
+  transition: 0.5s;
+}
+.my-works-card p::first-letter {
+  font-size: 150%;
+  font-weight: 400;
+}
+
+.card-header h5 {
+  font-weight: 400;
+  text-align: center;
 }
 
 /* width */

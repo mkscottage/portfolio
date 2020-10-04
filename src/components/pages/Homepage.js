@@ -1,6 +1,8 @@
 import React from "react";
-import * as MyPic from "../../assets/my_pic.jpg";
+import MyPic from "../../assets/my_pic.jpg";
 import BootstrapIcons from "../../../node_modules/bootstrap-icons/bootstrap-icons.svg";
+import ReactPic from "../../assets/reactjs-1.jpg";
+import FlaskPic from "../../assets/flask-1.png";
 
 const Homepage = () => {
   const skills = [
@@ -27,7 +29,7 @@ const Homepage = () => {
     },
   ];
   return (
-    <div className="container-fluid p-0">
+    <div className="container-fluid p-0" id="homepage">
       <div className="text-center px-0 py-4" id="homepage-about-me">
         <div className="container">
           <div id="image-cross-line" className="rounded m-0 p-0 d-flex">
@@ -44,7 +46,7 @@ const Homepage = () => {
             Mukesh Kumar Sharma
           </h2>
           <hr className="bg-white" />
-          <p className="text-light">
+          <p className="text-dark">
             I am a full stack developer and an enthusiast learner. I worked on
             many technologies including some powerful frameworks. I started my
             learning using C/C++, Java, Python then moved to web technologies
@@ -64,7 +66,8 @@ const Homepage = () => {
         <div className="container">
           <h2 className="display-4 text-white text-shadow">My Skills -</h2>
           <hr className="text-light" />
-          <div className="accordion" id="skills-accordion">
+          {/* <div className="accordian" id="skills-accordion"> */}
+          <div id="skills-accordion">
             {skills.map((skill) => (
               <div className="card" style={{ background: "rgba(0,0,0,0.1)" }}>
                 <div className="card-header p-0" id={`heading-${skill.id}`}>
@@ -81,9 +84,9 @@ const Homepage = () => {
                 </div>
                 <div
                   id={`collapse-${skill.id}`}
-                  className={`collapse${skill.id === 1 ? " show" : ""}`}
+                  className="collapse show"
                   aria-labelledby={`heading-${skill.id}`}
-                  data-parent="#skills-accordion"
+                  // data-parent="#skills-accordion"
                 >
                   <div className="card-body">
                     <ul className="list-group shadow">
@@ -92,8 +95,13 @@ const Homepage = () => {
                           <div className="row">
                             <div className="col-sm-4 col-6">{item[0]}</div>
                             <div className="col">
-                              <div className="progress shadow shadow-sm bg-warning">
-                                <div className="progress-bar bg-primary" style={{ width: `${item[1]}%` }}>{item[1]}%</div>
+                              <div className="progress shadow shadow-sm bg-success">
+                                <div
+                                  className="progress-bar bg-primary"
+                                  style={{ width: `${item[1]}%` }}
+                                >
+                                  {item[1]}%
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -109,7 +117,119 @@ const Homepage = () => {
       </div>
       <div id="homepage-my-works">
         <div className="container">
-            
+          <h2 className="display-4 text-white text-shadow">My Works -</h2>
+          <hr className="text-light" />
+          <div>
+            <div className="row">
+              <div className="col-12 col-md-6 col-lg-4 px-5 my-3">
+                <div className="card shadow-lg border-0 my-works-card">
+                  <div className="card-body p-0">
+                    <img
+                      src={ReactPic}
+                      alt="React"
+                      className="w-100 rounded-top"
+                    />
+                  </div>
+                  <div className="card-header border-0 py-1 my-0 bg-success shadow-sm">
+                    <h5 className="my-1 text-light">
+                      Profile Manager (frontend)
+                    </h5>
+                  </div>
+                  <div className="card-body py-2">
+                    <p>
+                      Profile Manager is a simple app just to demonstrate
+                      usage of React JS and created primarily for my reference.
+                    </p>
+                    <hr className="my-1" />
+                    <h6>Technologies used -</h6>
+                    <ul>
+                      <li>React JS</li>
+                    </ul>
+                  </div>
+                  <div className="card-footer p-0">
+                    <a
+                      target="_blank"
+                      href="https://github.com/mkscottage/react-profile-manager"
+                      className="btn btn-primary d-block rounded-0 rounded-bottom"
+                    >
+                      View Project
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 col-md-6 col-lg-4 px-5 my-3">
+                <div className="card shadow-lg border-0 my-works-card">
+                  <div className="card-body p-0">
+                    <img
+                      src={FlaskPic}
+                      alt="React"
+                      className="w-100 rounded-top"
+                    />
+                  </div>
+                  <div className="card-header border-0 py-1 my-0 bg-success shadow-sm">
+                    <h5 className="my-1 text-light">
+                      Profile Manager (backend)
+                    </h5>
+                  </div>
+                  <div className="card-body py-2">
+                    <p>
+                      Profile Manager is a simple app just to demonstrate
+                      usage of Flask framework and created primarily for my reference.
+                    </p>
+                    <hr className="my-1" />
+                    <h6>Technologies used -</h6>
+                    <ul>
+                      <li>Flask</li>
+                    </ul>
+                  </div>
+                  <div className="card-footer p-0">
+                    <a
+                      target="_blank"
+                      href="https://github.com/mkscottage/flask-profile-manager"
+                      className="btn btn-primary d-block rounded-0 rounded-bottom"
+                    >
+                      View Project
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 col-md-6 col-lg-4 px-5 my-3">
+                <div className="card shadow-lg border-0 my-works-card">
+                  <div className="card-body p-0">
+                    <img
+                      src={ReactPic}
+                      alt="React"
+                      className="w-100 rounded-top"
+                    />
+                  </div>
+                  <div className="card-header border-0 py-1 my-0 bg-success shadow-sm">
+                    <h5 className="my-1 text-light">
+                      Portfolio
+                    </h5>
+                  </div>
+                  <div className="card-body py-2">
+                    <p>
+                      Portfolio is the app which you are viewing now. It is also made to showcase my skills as well as for my reference.
+                    </p>
+                    <hr className="my-1" />
+                    <h6>Technologies used -</h6>
+                    <ul>
+                      <li>React JS</li>
+                    </ul>
+                  </div>
+                  <div className="card-footer p-0">
+                    <a
+                      target="_blank"
+                      href="https://github.com/mkscottage/portfolio"
+                      className="btn btn-primary d-block rounded-0 rounded-bottom"
+                    >
+                      View Project
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
