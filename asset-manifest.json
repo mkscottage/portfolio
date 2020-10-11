@@ -1,29 +1,33 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.15ea5dcb.chunk.css",
-    "main.js": "/portfolio/static/js/main.7ab89bce.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.7ab89bce.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.a096f19b.chunk.css",
+    "main.js": "/portfolio/static/js/main.c1bc73ef.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.c1bc73ef.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.209c2d7e.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.209c2d7e.js.map",
     "static/css/2.ea6b7726.chunk.css": "/portfolio/static/css/2.ea6b7726.chunk.css",
-    "static/js/2.c6448ece.chunk.js": "/portfolio/static/js/2.c6448ece.chunk.js",
-    "static/js/2.c6448ece.chunk.js.map": "/portfolio/static/js/2.c6448ece.chunk.js.map",
+    "static/js/2.fc21e58c.chunk.js": "/portfolio/static/js/2.fc21e58c.chunk.js",
+    "static/js/2.fc21e58c.chunk.js.map": "/portfolio/static/js/2.fc21e58c.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.586ac159932634a58cca1ec5dba8929f.js": "/portfolio/precache-manifest.586ac159932634a58cca1ec5dba8929f.js",
+    "precache-manifest.52ebd6319fcd47f5bb971104f9ae99df.js": "/portfolio/precache-manifest.52ebd6319fcd47f5bb971104f9ae99df.js",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/css/2.ea6b7726.chunk.css.map": "/portfolio/static/css/2.ea6b7726.chunk.css.map",
-    "static/css/main.15ea5dcb.chunk.css.map": "/portfolio/static/css/main.15ea5dcb.chunk.css.map",
-    "static/js/2.c6448ece.chunk.js.LICENSE.txt": "/portfolio/static/js/2.c6448ece.chunk.js.LICENSE.txt",
+    "static/css/main.a096f19b.chunk.css.map": "/portfolio/static/css/main.a096f19b.chunk.css.map",
+    "static/js/2.fc21e58c.chunk.js.LICENSE.txt": "/portfolio/static/js/2.fc21e58c.chunk.js.LICENSE.txt",
     "static/media/bootstrap-icons.svg": "/portfolio/static/media/bootstrap-icons.88073f98.svg",
     "static/media/flask-1.png": "/portfolio/static/media/flask-1.e31318e8.png",
     "static/media/my_pic.jpg": "/portfolio/static/media/my_pic.e6e486be.jpg",
-    "static/media/reactjs-1.jpg": "/portfolio/static/media/reactjs-1.17ac4ac1.jpg"
+    "static/media/reactjs-1.jpg": "/portfolio/static/media/reactjs-1.17ac4ac1.jpg",
+    "static/media/social-1_logo-github.5caba47f.svg": "/portfolio/static/media/social-1_logo-github.5caba47f.svg",
+    "static/media/social-1_logo-whatsapp.20e306a0.svg": "/portfolio/static/media/social-1_logo-whatsapp.20e306a0.svg",
+    "static/media/social-1_round-facebook.120997d4.svg": "/portfolio/static/media/social-1_round-facebook.120997d4.svg",
+    "static/media/social-1_round-instagram.f76be93e.svg": "/portfolio/static/media/social-1_round-instagram.f76be93e.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.209c2d7e.js",
     "static/css/2.ea6b7726.chunk.css",
-    "static/js/2.c6448ece.chunk.js",
-    "static/css/main.15ea5dcb.chunk.css",
-    "static/js/main.7ab89bce.chunk.js"
+    "static/js/2.fc21e58c.chunk.js",
+    "static/css/main.a096f19b.chunk.css",
+    "static/js/main.c1bc73ef.chunk.js"
   ]
 }
